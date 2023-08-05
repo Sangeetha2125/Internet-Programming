@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    margin: 1em;
+    letter-spacing: 2px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    padding-left: 2em;
+    padding-right: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+.content p{
+    text-align: justify;
+    line-height: 2;
+    font-size: 1.15em;
+    padding-bottom: 0.7em;
+    letter-spacing: 0.5px;
+}
+.image-container{
+    padding: 1em 0;
+}
+.image-container img{
+    display: block;
+    padding: 1em 0.5em;
+    padding-bottom: 0.5em;
+}

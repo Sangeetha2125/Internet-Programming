@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Map</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .body-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        iframe{
+            height: 93vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="body-container">
+        <img src="india-map.jpg" alt="India Map" usemap="#india" width="40%" height="100%">
+        <map id="india">
+            <area title="Tamil Nadu" target="place" alt="" title="" href="https://en.wikipedia.org/wiki/Tamil_Nadu" coords="268,548,247,552,233,563,214,562,217,575,204,583,194,598,198,603,188,586,199,613,202,621,204,637,205,651,222,650,211,658,229,636,240,635,251,613,258,611,258,584,267,561" shape="poly">
+            <area target="place" title="Andhra Pradesh" href="https://en.wikipedia.org/wiki/Andhra_Pradesh" coords="218,534,228,544,237,553,256,552,269,540,266,514,274,495,289,495,306,483,318,468,334,460,358,439,202,514,217,501,296,459,237,501,203,525,222,505,282,470,306,451,319,445,332,437,342,434,351,434,210,524,209,506,358,431,217,525" shape="poly">
+            <area target="place" title="Karnataka" href="https://en.wikipedia.org/wiki/Karnataka" coords="162,561,170,577,183,584,202,580,213,577,216,564,228,558,232,538,209,535,202,516,209,493,214,478,218,452,200,448,213,444,194,456,180,464,170,472,154,475,148,488,146,500,145,511" shape="poly">
+            <area target="place" title="Kerala" href="https://en.wikipedia.org/wiki/Kerala" coords="202,652,202,628,194,605,191,588,175,578,166,574,188,638,183,612,194,644" shape="poly">
+            <area target="place" title="Maharashtra" href="https://en.wikipedia.org/wiki/Maharashtra" coords="126,464,130,485,142,494,150,479,158,469,173,468,186,461,198,448,208,443,125,413,233,409,242,416,255,417,270,427,223,425,222,432,234,418,221,440,123,444,123,432,118,420,183,380,202,380,217,375,228,378,240,381,260,381,274,388,274,398,277,405,276,412,275,420,126,452,137,394,145,384,147,377,157,370,161,375,166,377,170,380" shape="poly">
+            <area target="place" title="Goa" href="https://en.wikipedia.org/wiki/Goa" coords="143,503,6" shape="circle">
+        </map>
+        <iframe name="place" src="https://en.wikipedia.org/wiki/India" frameborder="0" height="100%" width="58%"></iframe>
+    </div>
+</body>
+</html>

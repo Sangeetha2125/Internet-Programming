@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Resume</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            
+            color: black;
+        }
+        :root{
+            --primary:rgba(219, 184, 160, 0.302);
+            --secondary:rgb(69, 27, 0);
+            --light-bg:rgba(219, 184, 160, 0.05);
+            --grey:rgba(68, 69, 70, 0.3);
+        }
+        .resume-container{
+            max-width: 55%;
+            margin: 2em auto;
+        }
+        .body-container{
+            display: flex;
+            flex-direction: row;
+        }
+        .left-side{
+            width: 44%;
+            background-color: var(--primary);
+        }
+        .left-side .contact,.left-side .skills{
+            padding: 1.5em 1.35em;
+        }
+        .profile-img{
+            text-align: center;
+            padding-top: 2em;
+        }
+        .profile-img img{
+            height: 320px;
+            object-fit: contain;
+            width: 100%;
+        }
+        .left-side .contact div{
+            letter-spacing: 0.5px;
+            padding: 0.5em 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .left-side i{
+            align-self: flex-start;
+            border:2px solid;
+            padding: 8px;
+            border-radius: 50%;
+            height: 36px;
+            margin-right: 12px;
+            text-align: center;
+        }
+        .left-side span{
+            line-height: 1.75;
+        }
+        .left-side .contact{
+            padding-bottom: 1.5em;
+            border-bottom: 2px solid;
+        }
+        .left-side .contact .linkedin{
+            word-break: break-all;
+        }
+        .left-side .contact a:hover{
+            text-decoration: underline;
+        }
+        .left-side .skills{
+            margin-top: 1em;
+        }
+        .left-side .skills h3{
+            text-align: center;
+        }
+        .left-side .skill{
+            padding-top: 1.5em;
+        }
+        .progress-box{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .progress{
+            display: inline-block;
+            height: 7px;
+            width: 85%;
+            background-color: var(--grey);
+            border-radius: 7px;
+            margin: 0.5em 8px;
+            margin-left: 0;
+            position: relative;
+        }
+        .progress-percent{
+            position: absolute;
+            top:0;
+            left:0;
+            border-radius: 6px;
+            background-color: var(--secondary);
+            height: 6px;
+            display: inline-block;
+        }
+        .right-side{
+            width: 56%;
+            background-color:  var(--light-bg);
+        }
+        .header-content{
+            padding: 1.75em;
+            line-height: 1.7;
+            border-bottom: 2px solid;
+        }
+        .header-content h1{
+            letter-spacing: 3px;
+        }
+        .header-content p{
+            letter-spacing: 1.5px;
+            font-size: 1.15em;
+            margin-bottom: 0.75em;
+        }
+        .header-content .intro{
+            letter-spacing: 1px;
+            font-size: 1.07em;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+        .experience,.education,.certifications{
+            border-bottom: 2px solid;
+            text-align: justify;
+            padding: 1.75em;
+            padding-bottom: 0;
+        }
+        .experience h2,.education h2,.certifications h2{
+            letter-spacing: 1.5px;
+            padding-bottom: 1em;
+        }
+        .experience h3,.education h3,.certifications h3{
+            line-height: 1.5;
+            font-size: 1.17em;
+        }
+        .experience .duration{
+            padding-top: 1em;
+            padding-bottom: 1.4em;
+        }
+        .experience i{
+            margin-right: 10px;
+        }
+        .education .edu-content{
+            display: flex;
+            flex-direction: row;
+            padding-top: 0.5em;
+        }
+        .certifications{
+            border-bottom: none;
+        }
+        .education .score,.certifications .achievement{
+            padding-top: 1em;
+            padding-bottom: 1.4em;
+        }
+        .education .edu-content p{
+            padding-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="body-container">
+            <div class="left-side">
+                <div class="profile-img">
+                    <img src="profile.jpg">
+                </div>
+                <div class="contact">
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 6381693839</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>210701229@rajalakshmi.edu.in</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <span>No.38, Perumal Koil Street, Cholambedu, Thirumullaivoyal</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-linkedin"></i>      
+                        <a class="linkedin" href="https://www.linkedin.com
+                        /in/sangeetha-g-809202226">https://www.linkedin.com/in/sangeetha-g-809202226</a></span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-github"></i>                        
+                        <a href="https://github.com/Sangeetha2125">https://github.com/Sangeetha2125</a></span>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3>SKILLS</h3>
+                    <div class="skill">
+                        <p>React JS</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 70%;"></span>
+                            </p>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Material UI</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 60%;"></span>
+                            </p>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>JavaScript</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 75%;"></span>
+                            </p>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Laravel</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 50%;"></span>
+                            </p>
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>CSS</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 75%;"></span>
+                            </p>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Node JS</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 20%;"></span>
+                            </p>
+                            <span>20%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>PHP</p>
+                        <div class="progress-box">
+                            <p class="progress">
+                                <span class="progress-percent" style="width: 50%;"></span>
+                            </p>
+                            <span>50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="header-content">
+                    <h1>SANGEETHA G</h1>
+                    <p>FULL STACK WEB DEVELOPER</p>
+                    <p class="intro">
+                        I am a quick learner and always willing to explore new technologies and methodologies. I have also gained practical experience in developing web applications and software by working on various projects during my academic career.
+                    </p>
+                </div>
+                <div class="experience">
+                    <h2>EXPERIENCE</h2>
+                    <div>
+                        <h3>Appenius Private Limited - Web Developer Intern</h3>
+                        <div class="duration">
+                            <i class="fa-solid fa-calendar"></i><span>July 15 - Present</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Quilltez Soft Solutions Private Limited - Software Developer Intern</h3>
+                        <div class="duration">
+                            <i class="fa-solid fa-calendar"></i><span>June 5 - July 28</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education">
+                    <h2>EDUCATION</h2>
+                    <div>
+                        <h3>Sethu Bhaskara Matriculation Higher Secondary School, Pudur</h3>
+                        <div class="edu-content score">
+                            <p>SSLC - 97.8%</p>
+                            <p>HSC - 96.88%</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Rajalakshmi Engineering College, Chennai</h3>
+                        <div class="edu-content">
+                            Bachelor of Engineering in Computer Science
+                        </div>
+                        <div class="score">
+                            CGPA - 9.0
+                        </div>
+                    </div>
+                </div>
+                <div class="certifications">
+                    <h2>CERTIFICATIONS</h2>
+                    <div>
+                        <h3>Software Testing, NPTEL - IIT Bangalore</h3>
+                        <div class="achievement">1% Topper | Elite + Silver Certification</div>
+                    </div>
+                    <div>
+                        <h3>Python for Data Science, NPTEL - IIT Madras</h3>
+                        <div class="achievement">5% Topper | Elite + Silver Certification</div>
+                    </div>
+                    <div>
+                        <h3>Database Programming with SQL - Oracle</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

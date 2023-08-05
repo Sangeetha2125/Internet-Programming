@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            height:100vh;
+            justify-content:center;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('images/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        ::selection{
+            background-color: rgba(91, 2, 2, 0.85);
+            color: white;
+        }
+        .tt-title{
+            margin: auto;
+            color: white;
+            font-size: 3em;
+            letter-spacing: 4px;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+        .table-container{
+            width:1400px;
+            margin:auto;
+            background-color: rgba(255,255,255,0.75);
+        }
+        table{
+            border:5px double black;
+            border-collapse:collapse;
+        }
+        th{
+            font-size: 1.07em;
+        }
+        th,td{
+            height:100px;
+            text-align:center;
+            width:240px;
+            border:2px solid black;
+        }
+        table div{
+            line-height: 1.6;
+        }
+        table span:hover{
+            cursor: pointer;
+        }
+        .break-text{
+            text-orientation:upright;
+            writing-mode: vertical-rl;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 10px;
+            font-size:larger;
+        }
+        .lab-text{
+            color: rgb(212, 5, 5);
+        }
+        span{
+            position: relative;
+        }
+        span::before{
+            content: attr(data-title);
+            position: absolute;
+            bottom: -100%;
+            left: -50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+            padding: 1em 1.5em;
+            line-height: 1.75;
+            font-size: 0.8em;
+            border-radius: 4px;
+            background-color: rgba(91, 2, 2, 0.85);
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+        span:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        .counselling:hover,.vap:hover{
+            cursor: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tt-title">TIME TABLE</h1>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>DAY</th>
+                <th>
+                    <div>1</div>
+                    <div>8.00 - 9.00</div>
+                </th>
+                <th>
+                    <div>2</div>
+                    <div>9.00 - 9.50</div>
+                </th>
+                <th>
+                    <div>9.50 - 10.10</div>
+                </th>
+                <th>
+                    <div>3</div>
+                    <div>10.10 - 11.00</div>
+                </th>
+                <th>
+                    <div>4</div>
+                    <div>11.00 - 11.50</div>
+                </th>
+                <th>
+                    <div>5/L</div>
+                    <div>11.50 - 12.30/12.40</div>
+                </th>
+                <th>
+                    <div>L/5</div>
+                    <div>12.30/12.40 - 1.20</div>
+                </th>
+                <th>
+                    <div>6</div>
+                    <div>1.20 - 2.10</div>
+                </th>
+                <th>
+                    <div>7</div>
+                    <div>2.10 - 3.00</div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div>TUESDAY</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a></div>
+                    <div>A 208</div>
+                </td>
+                <td rowspan=5>
+                    <div  class="break-text">BREAK</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a> / <a href="poai.html" target="_blank"><span data-title="PRINCIPLES OF ARTIFICIAL INTELLIGENCE">AI19341 POAI</span></a></div>
+                    <div>LAB</div>
+                    <div class="lab-text">TLFL4 / TLGL3</div>
+                </td>
+                <td>
+                    <div>LUNCH</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="hci.html" target="_blank"><span data-title="HUMAN COMPUTER INTERACTION">CS19P06 HCI</span></a></div>
+                    <div>A 208</div>
+                </td>
+                <td>
+                    <div><span data-title="COUNSELLING" class="counselling">COUN</span></div>
+                    <div>A 208</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>WEDNESDAY</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a> / <a href="poai.html" target="_blank"><span data-title="PRINCIPLES OF ARTIFICIAL INTELLIGENCE">AI19341 POAI</span></a></div>
+		            <div>LAB</div>
+                    <div class="lab-text">TLFL1 / TLGL3</div>
+                </td>
+                <td>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a></div>
+                    <div>B 218</div>
+                </td>
+                <td colspan=2>
+                    <div><span data-title="VALUE ADDED PROGRAMME" class="vap">VAP</span></div>
+                </td>
+                <td>
+                    <div>LUNCH</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="toc.html" target="_blank"><span data-title="THEORY OF COMPUTATION">CS19501 TOC</span></a></div>
+                    <div>A 105</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>THURSDAY</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a></div>
+                    <div>A 208</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="hci.html" target="_blank"><span data-title="HUMAN COMPUTER INTERACTION">CS19P06 HCI</span></a> / <a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a></div>
+                    <div>LAB</div>
+                    <div class="lab-text">TLFL5 / JL2</div>
+                </td>
+                <td>
+                    <div>LUNCH</div>
+                </td>
+                <td>
+                    <div><a href="poai.html" target="_blank"><span data-title="PRINCIPLES OF ARTIFICIAL INTELLIGENCE">AI19341 POAI</span></a></div>
+                    <div>A 208</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a> / <a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a></div>
+                    <div>LAB</div>
+                    <div class="lab-text">TLFL4 / TLFL1</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>FRIDAY</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="hci.html" target="_blank"><span data-title="HUMAN COMPUTER INTERACTION">CS19P06 HCI</span></a> / <a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a></div>
+                    <div>LAB</div>
+                    <div class="lab-text">TLFL5 / TLFL4</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="toc.html" target="_blank"><span data-title="THEORY OF COMPUTATION">CS19501 TOC</span></a></div>
+                    <div>A 105</div>
+                </td>
+                <td>
+                    <div>LUNCH</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a></div>
+                    <div>A 208</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="rpa.html" target="_blank"><span data-title="INTRODUCTION TO ROBOTIC PROCESS AUTOMATION">OAI1903 RPA</span></a></div>
+                    <div>A 105</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>SATURDAY</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="poai.html" target="_blank"><span data-title="PRINCIPLES OF ARTIFICIAL INTELLIGENCE">AI19341 POAI</span></a></div>
+                    <div>A 211</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="rpa.html" target="_blank"><span data-title="INTRODUCTION TO ROBOTIC PROCESS AUTOMATION">OAI1903 RPA</span></a></div>
+                    <div>A 105</div>
+                </td>
+                <td>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a></div>
+                    <div>A 211</div>
+                </td>
+                <td>
+                    <div>LUNCH</div>
+                </td>
+                <td colspan=2>
+                    <div><a href="ip.html" target="_blank"><span data-title="INTERNET PROGRAMMING">CS19542 IP</span></a> / <a href="cn.html" target="_blank"><span data-title="COMPUTER NETWORKS">CS19541 CN</span></a></div>
+                    <div>LAB</div>
+                    <div class="lab-text">JL2 / JL1</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
