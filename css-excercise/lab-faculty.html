@@ -29,7 +29,7 @@
             letter-spacing: 5px;
         }
         main{
-            margin: 3em;
+            margin: 2em;
             display: grid;
             grid-template-columns: 28% 72%;
             height: 100%;
@@ -69,6 +69,19 @@
             border: 1px solid black;
             padding: 0.5em;
             line-height: 1.75;
+        }
+        @media screen and (max-width:1000px) {
+            main{
+                grid-template-columns: 1fr;
+            }
+            aside{
+                margin-right: 0;
+            }
+        }
+        @media screen and (max-width:560px) {
+            main{
+                margin: 1.5em;
+            }
         }
     </style>
 </head>
